@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert KM to Miles</title>
+    
+    <script type="text/javascript">
+        function convert(){
+            var kms = document.getElementById('data').value;
+            const factor = 0.621371;
+            var miles = kms * factor;
+        //    document.getElementById('result').innerText = `${miles} miles`;
+            document.getElementById('result').innerText = miles + ' miles';
+    }
+
+    </script>
+ 
+</head>
+<body>
+    <h1>Kilometers to Miles Converter</h1>
+    <input type="number" name="converter" step="any" id="data" placeholder="Type kilometers here"/>KM
+    <button onclick="convert()">Convert</button>
+    <h2>Result: </h2>
+    <h2 id="result"></h2>
+</body>
+</html>

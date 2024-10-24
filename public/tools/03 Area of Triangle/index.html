@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Area of Triangle</title>
+
+    <script type="text/javascript">
+
+    // Finding the Area of Triangle.
+
+        // let base = prompt('Please enter the base value');
+        // let height = prompt('Please enter the height value');
+        // var area = (base * height)/2;
+        // // console.log(area);
+        
+        // console.log('Base: ' + base + ' Height: ' + height);
+        // console.log('Area: '+area);
+
+    // Finding the area of regular triangle.
+    // If you know all the sides of a triangle, you can find he area using Herons' formula.
+    // If a, b and c are the the three sides of a trigangle, then
+    // General Formula: s = (a+b+c)/2;
+    // Area = square.root(s(s-a) * (s-b)* (s-c))
+
+        var a = 6;
+        var b = 2;
+        var c = 5;
+        var s = (a+b+c)/2;
+        var temp = s*(s-a)*(s-b)*(s-c);
+        var area = Math.sqrt(temp);
+        console.log(temp);
+        
+        </script>
+
+</head>
+<body>
+    
+</body>
+</html>
