@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Conv</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 62.5%;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: default;
+            --primaryColor: #7DD3FC;
+            --fontColor: #fff;
+            --btnColor: #FCD34D;
+            --containerColor: #2A2F35;
+            background-color: var(--primaryColor);
+        }
+
+        header h2 {
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: var(--containerColor);
+            border-radius: 4px;
+            color: var(--fontColor);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: .6rem .4rem;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            width: 84%;
+            height: 1.4rem;
+            border-radius: 4px;
+            font-size: 1.2rem;
+        }
+
+        button {
+            background-color: var(--btnColor);
+            color: var(--containerColor);
+            width: 6rem;
+            height: 1.4rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #res {
+            font-size: 1rem;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h2>Temp Conv (°C to °F)</h2>
+    </header>
+
+    <main>
+        <div class="container">
+            <label for="temp">Temperature in °C</label>
+            <input type="number" name="temp" id="celcius" placeholder="Type celcius here" />
+            <br><br>
+            <button onclick="convert()">Convert</button>
+            <p id="res"></p>
+        </div>
+    </main>
+
+    <script>
+        // Formula: fahrenheit = celcius * 1.8 + 32
+        function convert() {
+            let c = document.getElementById('celcius');
+            let f = ((c.value * 1.8) + 32).toFixed(2);
+            document.getElementById('res').innerText = `${c.value} °C = ${f} °F`;
+            c.value = '';
+        }
+    </script>
+</body>
+
+</html>

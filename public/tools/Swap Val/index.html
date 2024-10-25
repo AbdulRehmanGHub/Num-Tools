@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Val</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 62.5%;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: default;
+            --primaryColor: #7DD3FC;
+            --fontColor: #fff;
+            --btnColor: #FCD34D;
+            --containerColor: #2A2F35;
+            background-color: var(--primaryColor);
+        }
+
+        header h2 {
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: var(--containerColor);
+            border-radius: 4px;
+            color: var(--fontColor);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: .6rem .4rem;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            width: 84%;
+            height: 1.4rem;
+            border-radius: 4px;
+            font-size: 1.2rem;
+        }
+
+        button {
+            background-color: var(--btnColor);
+            color: var(--containerColor);
+            width: 6rem;
+            height: 1.4rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #res,
+        #res1 {
+            font-size: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Swap Val</h2>
+    </header>
+
+    <main>
+        <div class="container">
+            <label>Enter First Value</label>
+            <input class="val1" type="text">
+            <br>
+            <label>Enter Second Value</label>
+            <input class="val2" type="text">
+            <br><br>
+            <button onclick="swap()">Sum</button>
+            <br>
+            <p id="res"></p>
+            <p id="res1"></p>
+        </div>
+    </main>
+
+    <script>
+        let val1 = document.querySelector('.val1');
+        let val2 = document.querySelector('.val2');
+        let result = document.querySelector('#res');
+        let result1 = document.querySelector('#res1');
+
+        function swap() {
+            console.log(val1.value);
+            console.log(val2.value);
+            result.innerHTML = `You entered Value 1 as: ${val1.value}. <br> Your entered Value 2 as: ${val2.value}.`;
+
+            let tempNum;
+            tempNum = val1;
+            val1 = val2;
+            val2 = tempNum;
+
+            result1.innerHTML = `The values after swapping: <br> Value 1 is: ${val1.value}. <br> Value 2 is: ${val2.value}.`;
+            console.log(val1.value);
+            console.log(val2.value);
+
+            val1.value = '';
+            val2.value = '';
+        }
+    </script>
+</body>
+
+</html>
