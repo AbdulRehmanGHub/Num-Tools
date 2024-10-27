@@ -1,5 +1,17 @@
 {
   "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwind": "^4.0.0"
-  }
+  },
+  "name": "num-tools",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
+    "prettier": "npx prettier --write **/*.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

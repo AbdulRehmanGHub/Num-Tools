@@ -1,115 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calcul8r</title>
 
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-size: 62.5%;
-            font-family: Arial, Helvetica, sans-serif;
-            cursor: default;
-            --primaryColor: #7DD3FC;
-            --fontColor: #fff;
-            --btnColor: #FCD34D;
-            --containerColor: #2A2F35;
-            background-color: var(--primaryColor);
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: default;
+        --primaryColor: #7dd3fc;
+        --fontColor: #fff;
+        --btnColor: #fcd34d;
+        --containerColor: #2a2f35;
+        background-color: var(--primaryColor);
+      }
 
-        header h2 {
-            font-size: 1.6rem;
-            text-align: center;
-        }
+      header h2 {
+        font-size: 1.6rem;
+        text-align: center;
+      }
 
-        main {
-            display: flex;
-            justify-content: center;
-        }
+      main {
+        display: flex;
+        justify-content: center;
+      }
 
-        .container {
-            background-color: var(--containerColor);
-            border-radius: 4px;
-            color: var(--fontColor);
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: .6rem .4rem;
-        }
+      .container {
+        background-color: var(--containerColor);
+        border-radius: 4px;
+        color: var(--fontColor);
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem 0.4rem;
+      }
 
-        label {
-            font-size: 1rem;
-        }
+      label {
+        font-size: 1rem;
+      }
 
-        input {
-            border: none;
-            outline: none;
-            width: 84%;
-            height: 1.4rem;
-            border-radius: 4px;
-            font-size: 1.2rem;
-        }
+      input {
+        border: none;
+        outline: none;
+        width: 84%;
+        height: 1.4rem;
+        border-radius: 4px;
+        font-size: 1.2rem;
+      }
 
-        textarea {
-            border: none;
-            outline: none;
-            width: 84%;
-            border-radius: 2px;
-            font-size: .8rem;
-            resize: none;
-        }
+      textarea {
+        border: none;
+        outline: none;
+        width: 84%;
+        border-radius: 2px;
+        font-size: 0.8rem;
+        resize: none;
+      }
 
-        button {
-            background-color: var(--btnColor);
-            color: var(--containerColor);
-            width: 6rem;
-            height: 1.4rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+      button {
+        background-color: var(--btnColor);
+        color: var(--containerColor);
+        width: 6rem;
+        height: 1.4rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
 
-        .res {
-            font-size: 1rem;
-            text-align: center;
-        }
+      .res {
+        font-size: 1rem;
+        text-align: center;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h2>Calcul8r</h2>
+      <h2>Calcul8r</h2>
     </header>
 
     <main>
-        <div class="container">
-            <label>Enter first Num</label>
-            <input class="num1" type="number" placeholder="Type here.">
-            <br>
+      <div class="container">
+        <label>Enter first Num</label>
+        <input class="num1" type="number" placeholder="Type here." />
+        <br />
 
-            <label>Enter second Num</label>
-            <input class="num2" type="number" placeholder="Type here.">
-            <br>
+        <label>Enter second Num</label>
+        <input class="num2" type="number" placeholder="Type here." />
+        <br />
 
-            <label>Choose an Operator</label>
-            <input class="operator" type="text" maxlength="1" placeholder="+, -, x, /, %">
+        <label>Choose an Operator</label>
+        <input
+          class="operator"
+          type="text"
+          maxlength="1"
+          placeholder="+, -, x, /, %"
+        />
 
-            <br><br>
-            <button onclick="calc()">Calculate</button>
-            <br>
-            <p class="res"></p>
-        </div>
+        <br /><br />
+        <button onclick="calc()">Calculate</button>
+        <br />
+        <p class="res"></p>
+      </div>
     </main>
 
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>
